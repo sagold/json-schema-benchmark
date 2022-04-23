@@ -11,7 +11,7 @@ To make merging simpler, and to make sure no results were tampered with. We like
 new `.md` files ourselves.
 
 # Do not give any special treatment to any validator
-The only code that is validator specific should be in `index.js`.
+The only code that is validator specific should be in `validators.js`.
 
 This is to make sure that the tests remain as objective as possible.
 
