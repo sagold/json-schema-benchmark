@@ -8,7 +8,6 @@ that is the case for these tests.
 
 |test failed|reason
 |-----------|------
-`invalid instance should not raise error when float division = inf, always invalid, but naive implementations may raise an overflow error`|Expected result: `false` but validator returned: `true`
 `validation of string-encoded content based on media type, an invalid JSON document`|Expected result: `false` but validator returned: `true`
 `validation of binary string-encoding, an invalid base64 string (% is not a valid character)`|Expected result: `false` but validator returned: `true`
 `validation of binary-encoded media type documents, a validly-encoded invalid JSON document`|Expected result: `false` but validator returned: `true`
@@ -44,16 +43,12 @@ that is the case for these tests.
 `validation of internationalized host names, Arabic-Indic digits mixed with Extended Arabic-Indic digits`|Expected result: `false` but validator returned: `true`
 `validation of internationalized host names, ZERO WIDTH JOINER not preceded by Virama`|Expected result: `false` but validator returned: `true`
 `validation of internationalized host names, ZERO WIDTH JOINER not preceded by anything`|Expected result: `false` but validator returned: `true`
-`validation of IPv6 addresses, leading whitespace is invalid`|Expected result: `false` but validator returned: `true`
-`validation of IPv6 addresses, trailing whitespace is invalid`|Expected result: `false` but validator returned: `true`
-`validation of IPv6 addresses, zone id is not a part of ipv6 address`|Expected result: `false` but validator returned: `true`
 `validation of IRI References, an invalid IRI Reference`|Expected result: `false` but validator returned: `true`
 `validation of IRI References, an invalid IRI fragment`|Expected result: `false` but validator returned: `true`
 `validation of IRIs, an invalid IRI based on IPv6`|Expected result: `false` but validator returned: `true`
 `validation of IRIs, an invalid relative IRI Reference`|Expected result: `false` but validator returned: `true`
 `validation of IRIs, an invalid IRI`|Expected result: `false` but validator returned: `true`
 `validation of IRIs, an invalid IRI though valid IRI reference`|Expected result: `false` but validator returned: `true`
-`validation of URIs, an invalid URI with comma in scheme`|Expected result: `false` but validator returned: `true`
 `Proper UTF-16 surrogate pair handling: pattern, matches empty`|Expected result: `true` but validator returned: `false`
 `Proper UTF-16 surrogate pair handling: pattern, matches two`|Expected result: `true` but validator returned: `false`
 `Proper UTF-16 surrogate pair handling: patternProperties, doesn't match two`|Expected result: `false` but validator returned: `true`

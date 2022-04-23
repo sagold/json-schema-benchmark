@@ -14,24 +14,24 @@ that is the case for these tests.
 `anyOf with boolean schemas, all true, any value is valid`|Expected result: `true` but validator returned: `"Cannot create property '__$validated' on boolean 'true'"`
 `anyOf with boolean schemas, some true, any value is valid`|Expected result: `true` but validator returned: `"Cannot create property '__$validated' on boolean 'false'"`
 `anyOf with boolean schemas, all false, any value is invalid`|Expected result: `false` but validator returned: `"Cannot create property '__$validated' on boolean 'false'"`
-`boolean schema 'true', number is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`. **This excludes this validator from performance tests**
-`boolean schema 'true', string is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`. **This excludes this validator from performance tests**
-`boolean schema 'true', boolean true is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`. **This excludes this validator from performance tests**
-`boolean schema 'true', boolean false is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`. **This excludes this validator from performance tests**
-`boolean schema 'true', null is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`. **This excludes this validator from performance tests**
-`boolean schema 'true', object is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`. **This excludes this validator from performance tests**
-`boolean schema 'true', empty object is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`. **This excludes this validator from performance tests**
-`boolean schema 'true', array is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`. **This excludes this validator from performance tests**
-`boolean schema 'true', empty array is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`. **This excludes this validator from performance tests**
-`boolean schema 'false', number is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`
-`boolean schema 'false', string is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`
-`boolean schema 'false', boolean true is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`
-`boolean schema 'false', boolean false is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`
-`boolean schema 'false', null is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`
-`boolean schema 'false', object is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`
-`boolean schema 'false', empty object is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`
-`boolean schema 'false', array is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`
-`boolean schema 'false', empty array is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be an string or object but boolean was passed!"`
+`boolean schema 'true', number is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`. **This excludes this validator from performance tests**
+`boolean schema 'true', string is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`. **This excludes this validator from performance tests**
+`boolean schema 'true', boolean true is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`. **This excludes this validator from performance tests**
+`boolean schema 'true', boolean false is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`. **This excludes this validator from performance tests**
+`boolean schema 'true', null is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`. **This excludes this validator from performance tests**
+`boolean schema 'true', object is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`. **This excludes this validator from performance tests**
+`boolean schema 'true', empty object is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`. **This excludes this validator from performance tests**
+`boolean schema 'true', array is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`. **This excludes this validator from performance tests**
+`boolean schema 'true', empty array is valid`|Expected result: `true` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`. **This excludes this validator from performance tests**
+`boolean schema 'false', number is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`
+`boolean schema 'false', string is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`
+`boolean schema 'false', boolean true is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`
+`boolean schema 'false', boolean false is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`
+`boolean schema 'false', null is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`
+`boolean schema 'false', object is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`
+`boolean schema 'false', empty object is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`
+`boolean schema 'false', array is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`
+`boolean schema 'false', empty array is invalid`|Expected result: `false` but validator returned: `"Invalid .validate call - schema must be a string or object but boolean was passed!"`
 `const validation, another value is invalid`|Expected result: `false` but validator returned: `true`
 `const validation, another type is invalid`|Expected result: `false` but validator returned: `true`
 `const with object, another object is invalid`|Expected result: `false` but validator returned: `true`
