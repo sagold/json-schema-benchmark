@@ -4,9 +4,9 @@
   "license": "MIT",
   "dependencies": {
     "@cfworker/json-schema": "*",
-    "@exodus/schemasafe": "^1.0.0-rc.3",
+    "@exodus/schemasafe": "*",
     "ajv": "*",
-    "ajv-formats": "^2.1.1",
+    "ajv-formats": "*",
     "async": "^3.2.0",
     "benchmark": "^2.1.4",
     "deep-equal": "^2.0.4",

@@ -15,16 +15,16 @@ for validators that cause side-effects on schema or data. The top 6 validators t
 
 # Performance
 
-![performance](https://chart.googleapis.com/chart?chxt=x,y&cht=bhs&chco=76A4FB&chls=2.0&chbh=62,4,1&chs=600x416&chxl=-1:|@exodus&#x2F;schemasafe|ajv|djv|@cfworker&#x2F;json-schema|json-schema-library|jsonschema&chd=t:100,64.6,15.1,3.7,2.1,1)
+![performance](https://chart.googleapis.com/chart?chxt=x,y&cht=bhs&chco=76A4FB&chls=2.0&chbh=62,4,1&chs=600x416&chxl=-1:|@exodus&#x2F;schemasafe|ajv|djv|@cfworker&#x2F;json-schema|json-schema-library|jsonschema&chd=t:100,62.7,14.4,4,2,1)
 
 |Validator|Relative speed|Number of test runs per second|
 |---------|:------------:|:----------------------------:|
-|[`@exodus/schemasafe`](https://github.com/ExodusMovement/schemasafe)|100%|8923 (± 4.21%)|
-|[`ajv`](https://ajv.js.org)|64.6%|5763 (± 5.31%)|
-|[`djv`](https://github.com/korzio/djv#readme)|15.1%|1349 (± 2.08%)|
-|[`@cfworker/json-schema`](https://github.com/cfworker/cfworker/tree/master/packages/json-schema/README.md)|3.7%|331 (± 1.4%)|
-|[`json-schema-library`](https://github.com/sagold/json-schema-library)|2.1%|186 (± 1.68%)|
-|[`jsonschema`](https://github.com/tdegrunt/jsonschema#readme)|1%|93 (± 2.03%)|
+|[`@exodus/schemasafe`](https://github.com/ExodusMovement/schemasafe)|100%|9184 (± 4.52%)|
+|[`ajv`](https://ajv.js.org)|62.7%|5756 (± 4.87%)|
+|[`djv`](https://github.com/korzio/djv#readme)|14.4%|1325 (± 2.07%)|
+|[`@cfworker/json-schema`](https://github.com/cfworker/cfworker/tree/master/packages/json-schema/README.md)|4%|363 (± 1.66%)|
+|[`json-schema-library`](https://github.com/sagold/json-schema-library)|2%|184 (± 2.92%)|
+|[`jsonschema`](https://github.com/tdegrunt/jsonschema#readme)|1%|91 (± 2.34%)|
 
 884 tests are run in each test run.
 
