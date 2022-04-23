@@ -1,6 +1,13 @@
 # json-schema-benchmark (draft6)
 Performance benchmark for Node.js JSON-schema validators. 
 
+> [2022/04/23] The purpose of [this fork](https://github.com/sagold/json-schema-benchmark) is just to have an updated benchmark result for the current state of supported draft features and their performance. I have no intention on maintaining this repository.
+>
+> Changes made:
+> - updated ajv setup and integrated ajv formats plugin
+> - changed default draft to draft 07
+> - updated benchmark results
+
 Also tests against [official JSON-schema test suite](https://github.com/json-schema/JSON-Schema-Test-Suite), version draft6. and checks
 for validators that cause side-effects on schema or data. The top 6 validators that fail the least tests are included in the benchmark.
 
@@ -8,16 +15,16 @@ for validators that cause side-effects on schema or data. The top 6 validators t
 
 # Performance
 
-![performance](https://chart.googleapis.com/chart?chxt=x,y&cht=bhs&chco=76A4FB&chls=2.0&chbh=62,4,1&chs=600x416&chxl=-1:|@exodus&#x2F;schemasafe|ajv|djv|@cfworker&#x2F;json-schema|json-schema-library|jsonschema&chd=t:100,62.6,14.4,3.9,2,1)
+![performance](https://chart.googleapis.com/chart?chxt=x,y&cht=bhs&chco=76A4FB&chls=2.0&chbh=62,4,1&chs=600x416&chxl=-1:|@exodus&#x2F;schemasafe|ajv|djv|@cfworker&#x2F;json-schema|json-schema-library|jsonschema&chd=t:100,64.6,15.1,3.7,2.1,1)
 
 |Validator|Relative speed|Number of test runs per second|
 |---------|:------------:|:----------------------------:|
-|[`@exodus/schemasafe`](https://github.com/ExodusMovement/schemasafe)|100%|9368 (± 4.61%)|
-|[`ajv`](https://ajv.js.org)|62.6%|5865 (± 4.06%)|
-|[`djv`](https://github.com/korzio/djv#readme)|14.4%|1347 (± 1.81%)|
-|[`@cfworker/json-schema`](https://github.com/cfworker/cfworker/tree/master/packages/json-schema/README.md)|3.9%|365 (± 1.82%)|
-|[`json-schema-library`](https://github.com/sagold/json-schema-library)|2%|186 (± 2.04%)|
-|[`jsonschema`](https://github.com/tdegrunt/jsonschema#readme)|1%|96 (± 1.23%)|
+|[`@exodus/schemasafe`](https://github.com/ExodusMovement/schemasafe)|100%|8923 (± 4.21%)|
+|[`ajv`](https://ajv.js.org)|64.6%|5763 (± 5.31%)|
+|[`djv`](https://github.com/korzio/djv#readme)|15.1%|1349 (± 2.08%)|
+|[`@cfworker/json-schema`](https://github.com/cfworker/cfworker/tree/master/packages/json-schema/README.md)|3.7%|331 (± 1.4%)|
+|[`json-schema-library`](https://github.com/sagold/json-schema-library)|2.1%|186 (± 1.68%)|
+|[`jsonschema`](https://github.com/tdegrunt/jsonschema#readme)|1%|93 (± 2.03%)|
 
 884 tests are run in each test run.
 
