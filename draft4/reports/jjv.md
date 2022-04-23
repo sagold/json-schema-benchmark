@@ -13,6 +13,7 @@ that is the case for these tests.
 |-----------|------
 `additionalItems should not look in applicators, valid case, items defined in allOf are not examined`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `additionalProperties being false does not allow other properties, ignores strings`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
+`valid definition, valid definition schema`|Expected result: `true` but validator returned: `false`
 `validation of e-mail addresses, ignores integers`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `validation of e-mail addresses, ignores floats`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `validation of e-mail addresses, ignores objects`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
@@ -73,16 +74,17 @@ that is the case for these tests.
 `escaped pointer ref, slash valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `escaped pointer ref, tilde valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `escaped pointer ref, percent valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
+`remote ref, containing refs itself, remote ref valid`|Expected result: `true` but validator returned: `false`
 `Recursive references between schemas, valid tree`|Expected result: `true` but validator returned: `false`
 `refs with quote, object with numbers is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
-`Location-independent identifier, match`|Expected result: `true` but validator returned: `false`
+`Location-independent identifier, match`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `Location-independent identifier with absolute URI, match`|Expected result: `true` but validator returned: `false`
 `Location-independent identifier with base URI change in subschema, match`|Expected result: `true` but validator returned: `false`
-`base URI change, base URI change ref valid`|Expected result: `true` but validator returned: `false`
+`base URI change, base URI change ref valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `base URI change - change folder, number is valid`|Expected result: `true` but validator returned: `false`
 `base URI change - change folder in subschema, number is valid`|Expected result: `true` but validator returned: `false`
 `root ref in remote ref, string is valid`|Expected result: `true` but validator returned: `false`
-`root ref in remote ref, null is valid`|Expected result: `true` but validator returned: `false`
+`root ref in remote ref, null is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `required validation, ignores strings`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `required validation, ignores other non-objects`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `uniqueItems validation, objects are non-unique despite key order`|Expected result: `false` but validator returned: `true`

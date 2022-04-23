@@ -13,6 +13,10 @@ that is the case for these tests.
 |-----------|------
 `anyOf with one empty schema, string is valid`|The schema failed to load(`some checks are never reachable at #`)
 `anyOf with one empty schema, number is valid`|The schema failed to load(`some checks are never reachable at #`)
+`valid definition, valid definition schema`|The schema failed to load(`failed to resolve $ref: "http://json-schema.org/draft-04/schema#" at #`)
+`invalid definition, invalid definition schema`|The schema failed to load(`failed to resolve $ref: "http://json-schema.org/draft-04/schema#" at #`)
+`remote ref, containing refs itself, remote ref valid`|The schema failed to load(`failed to resolve $ref: "http://json-schema.org/draft-04/schema#" at #`)
+`remote ref, containing refs itself, remote ref invalid`|The schema failed to load(`failed to resolve $ref: "http://json-schema.org/draft-04/schema#" at #`)
 
 **All other tests passed**.
 

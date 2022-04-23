@@ -11,6 +11,8 @@ that is the case for these tests.
 
 |test failed|reason
 |-----------|------
+`valid definition, valid definition schema`|Expected result: `true` but validator returned: `"Maximum call stack size exceeded"`
+`invalid definition, invalid definition schema`|Expected result: `false` but validator returned: `"Maximum call stack size exceeded"`
 `enum with false does not match 0, false is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `enum with true does not match 1, true is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `enum with 0 does not match false, false is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
@@ -59,8 +61,10 @@ that is the case for these tests.
 `Proper UTF-16 surrogate pair handling: pattern, matches empty`|Expected result: `true` but validator returned: `false`
 `Proper UTF-16 surrogate pair handling: pattern, matches two`|Expected result: `true` but validator returned: `false`
 `Proper UTF-16 surrogate pair handling: patternProperties, doesn't match two`|Expected result: `false` but validator returned: `true`
-`Location-independent identifier, match`|Expected result: `true` but validator returned: `"Maximum call stack size exceeded"`
-`Location-independent identifier, mismatch`|Expected result: `false` but validator returned: `"Maximum call stack size exceeded"`
+`remote ref, containing refs itself, remote ref valid`|Expected result: `true` but validator returned: `"Maximum call stack size exceeded"`
+`remote ref, containing refs itself, remote ref invalid`|Expected result: `false` but validator returned: `"Maximum call stack size exceeded"`
+`Location-independent identifier, match`|Expected result: `true` but validator returned: `"Maximum call stack size exceeded"`. **This excludes this validator from performance tests**
+`Location-independent identifier, mismatch`|Expected result: `false` but validator returned: `"Maximum call stack size exceeded"`. **This excludes this validator from performance tests**
 `Location-independent identifier with absolute URI, match`|Expected result: `true` but validator returned: `"Maximum call stack size exceeded"`
 `Location-independent identifier with absolute URI, mismatch`|Expected result: `false` but validator returned: `"Maximum call stack size exceeded"`. **This excludes this validator from performance tests**
 `Location-independent identifier with base URI change in subschema, match`|Expected result: `true` but validator returned: `"Maximum call stack size exceeded"`

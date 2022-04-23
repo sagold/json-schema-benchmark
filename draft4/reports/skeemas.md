@@ -11,6 +11,8 @@ that is the case for these tests.
 
 |test failed|reason
 |-----------|------
+`valid definition, valid definition schema`|Expected result: `true` but validator returned: `"Unable to locate JSON Ref (http://json-schema.org/draft-04/schema)"`
+`invalid definition, invalid definition schema`|Expected result: `false` but validator returned: `"Unable to locate JSON Ref (http://json-schema.org/draft-04/schema)"`
 `validation of e-mail addresses, ignores integers`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `validation of e-mail addresses, ignores floats`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `validation of e-mail addresses, ignores objects`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
@@ -60,10 +62,12 @@ that is the case for these tests.
 `Proper UTF-16 surrogate pair handling: pattern, matches empty`|Expected result: `true` but validator returned: `false`
 `Proper UTF-16 surrogate pair handling: pattern, matches two`|Expected result: `true` but validator returned: `false`
 `Proper UTF-16 surrogate pair handling: patternProperties, doesn't match two`|Expected result: `false` but validator returned: `true`
+`remote ref, containing refs itself, remote ref valid`|Expected result: `true` but validator returned: `"Unable to locate JSON Ref (http://json-schema.org/draft-04/schema)"`
+`remote ref, containing refs itself, remote ref invalid`|Expected result: `false` but validator returned: `"Unable to locate JSON Ref (http://json-schema.org/draft-04/schema)"`
 `Recursive references between schemas, valid tree`|Expected result: `true` but validator returned: `"Unable to locate JSON Ref (http://localhost:1234/node)"`
 `Recursive references between schemas, invalid tree`|Expected result: `false` but validator returned: `"Unable to locate JSON Ref (http://localhost:1234/node)"`
-`Location-independent identifier, match`|Expected result: `true` but validator returned: `"Invalid JSON Pointer (\"foo\"): non-empty pointers must begin with \"/\" or \"#/\""`
-`Location-independent identifier, mismatch`|Expected result: `false` but validator returned: `"Invalid JSON Pointer (\"foo\"): non-empty pointers must begin with \"/\" or \"#/\""`
+`Location-independent identifier, match`|Expected result: `true` but validator returned: `"Invalid JSON Pointer (\"foo\"): non-empty pointers must begin with \"/\" or \"#/\""`. **This excludes this validator from performance tests**
+`Location-independent identifier, mismatch`|Expected result: `false` but validator returned: `"Invalid JSON Pointer (\"foo\"): non-empty pointers must begin with \"/\" or \"#/\""`. **This excludes this validator from performance tests**
 `Location-independent identifier with absolute URI, match`|Expected result: `true` but validator returned: `"Unable to locate JSON Ref (http://localhost:1234/bar)"`
 `Location-independent identifier with absolute URI, mismatch`|Expected result: `false` but validator returned: `"Unable to locate JSON Ref (http://localhost:1234/bar)"`. **This excludes this validator from performance tests**
 `Location-independent identifier with base URI change in subschema, match`|Expected result: `true` but validator returned: `"Unable to locate JSON Ref (http://localhost:1234/http://localhost:1234/nested.json)"`
