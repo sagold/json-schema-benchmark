@@ -17,14 +17,16 @@ const revalidator = require("revalidator");
 const jsonGate = require("json-gate");
 const jsen = require("jsen");
 const schemasaurus = require("schemasaurus");
-const ajv = require("ajv")({ schemaId: "auto" });
+const Ajv = require("ajv");
+const ajvAddFormats = require("ajv-formats")
 const djv = require("djv")();
 const jsvg = require("json-schema-validator-generator").default;
 const jlib = require("json-schema-library");
 const schemasafe = require("@exodus/schemasafe");
+
 let cfworker;
 
-module.exports = async function valivators(draftUri, draftVersion) {
+module.exports = async function validators(draftUri, draftVersion) {
   const files = await util.promisify(glob)(
     "JSON-Schema-Test-Suite/remotes/**/*.json"
   );
@@ -40,19 +42,18 @@ module.exports = async function valivators(draftUri, draftVersion) {
       return acc;
     },
     {
-      "http://json-schema.org/draft-04/schema": require("./refs/json-schema-draft-04.json"),
       "http://json-schema.org/draft-06/schema": require("./refs/json-schema-draft-06.json"),
       "http://json-schema.org/draft-07/schema": require("./refs/json-schema-draft-07.json"),
     }
   );
 
   Object.keys(refs).forEach(function(uri) {
-    try {
-      ajv.addSchema(refs[uri], uri);
-    } catch (ex) {} //ignore draft-04 already loaded
     djv.addSchema(uri, refs[uri]);
     jlib.addSchema(uri, refs[uri]);
   });
+
+  const ajv = new Ajv({ strict: false });
+  ajvAddFormats(ajv);
 
   const validators = [
     {
@@ -86,12 +87,9 @@ module.exports = async function valivators(draftUri, draftVersion) {
     {
       name: "ajv",
       setup: function(schema) {
-        ajv._opts.defaultMeta = draftUri;
         return ajv.compile(schema);
       },
-      test: function(instance, json, schema) {
-        return instance(json);
-      },
+      test: (validate, data, schema) => validate(data)
     },
     {
       name: "themis",
