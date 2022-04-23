@@ -52,9 +52,6 @@ module.exports = async function validators(draftUri, draftVersion) {
     jlib.addSchema(uri, refs[uri]);
   });
 
-  const ajv = new Ajv({ strict: false });
-  ajvAddFormats(ajv);
-
   const validators = [
     {
       name: "json-schema-validator-generator",
@@ -87,6 +84,8 @@ module.exports = async function validators(draftUri, draftVersion) {
     {
       name: "ajv",
       setup: function(schema) {
+        const ajv = new Ajv({ strict: false });
+        ajvAddFormats(ajv);
         return ajv.compile(schema);
       },
       test: (validate, data, schema) => validate(data)
