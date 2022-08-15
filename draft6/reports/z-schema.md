@@ -62,12 +62,12 @@ that is the case for these tests.
 `float and integers are equal up to 64-bit representation limits, integer minus one is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `float and integers are equal up to 64-bit representation limits, float minus one is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `nul characters in strings, do not match string lacking nul`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`contains keyword validation, array without items matching schema is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword validation, empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with const keyword, array without item 5 is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema true, empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema false, any non-empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema false, empty array is invalid`|Expected result: `false` but validator returned: `true`
+`contains keyword validation, array without items matching schema is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword validation, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with const keyword, array without item 5 is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema true, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema false, any non-empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema false, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `items + contains, matches items, does not match contains`|Expected result: `false` but validator returned: `true`
 `valid definition, valid definition schema`|Expected result: `true` but validator returned: `false`
 `dependencies with empty array, empty object`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
@@ -101,7 +101,7 @@ that is the case for these tests.
 `items with boolean schema (true), empty array is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `items with boolean schema (false), empty array is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `items with boolean schemas, array with one item is valid`|Expected result: `true` but validator returned: `"Cannot create property '__$validated' on boolean 'false'"`. **This excludes this validator from performance tests**
-`items with boolean schemas, array with two items is invalid`|Expected result: `false` but validator returned: `"Cannot create property '__$validated' on boolean 'false'"`
+`items with boolean schemas, array with two items is invalid`|Expected result: `false` but validator returned: `"Cannot create property '__$validated' on boolean 'false'"`. **This excludes this validator from performance tests**
 `items with boolean schemas, empty array is valid`|Expected result: `true` but validator returned: `"Cannot create property '__$validated' on boolean 'false'"`. **This excludes this validator from performance tests**
 `not with boolean schema false, any value is valid`|Expected result: `true` but validator returned: `false`
 `oneOf with boolean schemas, all true, any value is invalid`|Expected result: `false` but validator returned: `"Cannot create property '__$validated' on boolean 'true'"`. **This excludes this validator from performance tests**
@@ -148,7 +148,7 @@ that is the case for these tests.
 `validation of URIs, an invalid URI though valid URI reference`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `validation of URIs, an invalid URI with spaces`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `validation of URIs, an invalid URI with spaces and missing scheme`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`validation of URIs, an invalid URI with comma in scheme`|Expected result: `false` but validator returned: `true`
+`validation of URIs, an invalid URI with comma in scheme`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `Proper UTF-16 surrogate pair handling: pattern, matches empty`|Expected result: `true` but validator returned: `false`
 `Proper UTF-16 surrogate pair handling: pattern, matches two`|Expected result: `true` but validator returned: `false`
 `Proper UTF-16 surrogate pair handling: patternProperties, doesn't match two`|Expected result: `false` but validator returned: `true`

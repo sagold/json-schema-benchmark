@@ -83,12 +83,12 @@ that is the case for these tests.
 `float and integers are equal up to 64-bit representation limits, integer minus one is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `float and integers are equal up to 64-bit representation limits, float minus one is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `nul characters in strings, do not match string lacking nul`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`contains keyword validation, array without items matching schema is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword validation, empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with const keyword, array without item 5 is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema true, empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema false, any non-empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema false, empty array is invalid`|Expected result: `false` but validator returned: `true`
+`contains keyword validation, array without items matching schema is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword validation, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with const keyword, array without item 5 is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema true, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema false, any non-empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema false, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `items + contains, matches items, does not match contains`|Expected result: `false` but validator returned: `true`
 `items + contains, does not match items, matches contains`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `items + contains, matches neither items nor contains`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
@@ -177,10 +177,10 @@ that is the case for these tests.
 `evaluating the same schema location against the same data location twice is not a sign of an infinite loop, failing case`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `items with boolean schema (true), any array is valid`|The schema failed to load(`Schema: 'items' attribute is a boolean when it should be either an object (schema) or an array`). **This excludes this validator from performance tests**
 `items with boolean schema (true), empty array is valid`|The schema failed to load(`Schema: 'items' attribute is a boolean when it should be either an object (schema) or an array`). **This excludes this validator from performance tests**
-`items with boolean schema (false), any non-empty array is invalid`|The schema failed to load(`Schema: 'items' attribute is a boolean when it should be either an object (schema) or an array`)
+`items with boolean schema (false), any non-empty array is invalid`|The schema failed to load(`Schema: 'items' attribute is a boolean when it should be either an object (schema) or an array`). **This excludes this validator from performance tests**
 `items with boolean schema (false), empty array is valid`|The schema failed to load(`Schema: 'items' attribute is a boolean when it should be either an object (schema) or an array`). **This excludes this validator from performance tests**
 `items with boolean schemas, array with one item is valid`|The schema failed to load(`Schema: 'items' attribute element 0 is not a valid schema: Schema is a boolean when it should be an object`). **This excludes this validator from performance tests**
-`items with boolean schemas, array with two items is invalid`|The schema failed to load(`Schema: 'items' attribute element 0 is not a valid schema: Schema is a boolean when it should be an object`)
+`items with boolean schemas, array with two items is invalid`|The schema failed to load(`Schema: 'items' attribute element 0 is not a valid schema: Schema is a boolean when it should be an object`). **This excludes this validator from performance tests**
 `items with boolean schemas, empty array is valid`|The schema failed to load(`Schema: 'items' attribute element 0 is not a valid schema: Schema is a boolean when it should be an object`). **This excludes this validator from performance tests**
 `items and subitems, too many sub-items`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `items and subitems, wrong item`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
@@ -325,18 +325,18 @@ that is the case for these tests.
 `validation of IRIs, an invalid relative IRI Reference`|Expected result: `false` but validator returned: `true`
 `validation of IRIs, an invalid IRI`|Expected result: `false` but validator returned: `true`
 `validation of IRIs, an invalid IRI though valid IRI reference`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (~ not escaped)`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #1`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #2`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #3`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #1`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #2`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #1`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #2`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (multiple characters not escaped)`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #1`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #2`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #3`|Expected result: `false` but validator returned: `true`
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (~ not escaped)`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #1`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #2`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #3`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #1`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #2`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #1`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #2`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (multiple characters not escaped)`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #1`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #2`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #3`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `validation of regular expressions, a valid regular expression`|The schema failed to load(`Schema: 'type' attribute does not conform to the 'regex' format`). **This excludes this validator from performance tests**
 `validation of regular expressions, a regular expression with unclosed parens is invalid`|The schema failed to load(`Schema: 'type' attribute does not conform to the 'regex' format`)
 `validation of Relative JSON Pointers (RJP), an invalid RJP that is a valid JSON Pointer`|Expected result: `false` but validator returned: `true`
@@ -366,7 +366,7 @@ that is the case for these tests.
 `validation of URIs, an invalid URI though valid URI reference`|The schema failed to load(`Schema: 'type' attribute does not conform to the 'uri' format`). **This excludes this validator from performance tests**
 `validation of URIs, an invalid URI with spaces`|The schema failed to load(`Schema: 'type' attribute does not conform to the 'uri' format`). **This excludes this validator from performance tests**
 `validation of URIs, an invalid URI with spaces and missing scheme`|The schema failed to load(`Schema: 'type' attribute does not conform to the 'uri' format`). **This excludes this validator from performance tests**
-`validation of URIs, an invalid URI with comma in scheme`|The schema failed to load(`Schema: 'type' attribute does not conform to the 'uri' format`)
+`validation of URIs, an invalid URI with comma in scheme`|The schema failed to load(`Schema: 'type' attribute does not conform to the 'uri' format`). **This excludes this validator from performance tests**
 `Proper UTF-16 surrogate pair handling: pattern, matches empty`|Expected result: `true` but validator returned: `false`
 `Proper UTF-16 surrogate pair handling: pattern, matches two`|Expected result: `true` but validator returned: `false`
 `Proper UTF-16 surrogate pair handling: patternProperties, doesn't match two`|Expected result: `false` but validator returned: `true`

@@ -8,7 +8,7 @@ that is the case for these tests.
 
 |test failed|reason
 |-----------|------
-`additionalItems should not look in applicators, valid case, items defined in allOf are not examined`|The schema failed to load(`Cannot read property '$$visited' of undefined`). **This excludes this validator from performance tests**
+`additionalItems should not look in applicators, valid case, items defined in allOf are not examined`|The schema failed to load(`Cannot read properties of undefined (reading '$$visited')`). **This excludes this validator from performance tests**
 `allOf with boolean schemas, all true, any value is valid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
 `allOf with boolean schemas, some false, any value is invalid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
 `allOf with boolean schemas, all false, any value is invalid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
@@ -63,12 +63,12 @@ that is the case for these tests.
 `float and integers are equal up to 64-bit representation limits, integer minus one is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `float and integers are equal up to 64-bit representation limits, float minus one is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `nul characters in strings, do not match string lacking nul`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`contains keyword validation, array without items matching schema is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword validation, empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with const keyword, array without item 5 is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema true, empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema false, any non-empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema false, empty array is invalid`|Expected result: `false` but validator returned: `true`
+`contains keyword validation, array without items matching schema is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword validation, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with const keyword, array without item 5 is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema true, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema false, any non-empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema false, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `items + contains, matches items, does not match contains`|Expected result: `false` but validator returned: `true`
 `valid definition, valid definition schema`|The schema failed to load(`Remote refs are not supported for now :(`)
 `invalid definition, invalid definition schema`|The schema failed to load(`Remote refs are not supported for now :(`)
@@ -111,9 +111,9 @@ that is the case for these tests.
 `an array of schemas for items, JavaScript pseudo-array is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `items with boolean schema (true), any array is valid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
 `items with boolean schema (true), empty array is valid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
-`items with boolean schema (false), any non-empty array is invalid`|Expected result: `false` but validator returned: `true`
+`items with boolean schema (false), any non-empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `items with boolean schemas, array with one item is valid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
-`items with boolean schemas, array with two items is invalid`|The schema failed to load(`Object.defineProperty called on non-object`)
+`items with boolean schemas, array with two items is invalid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
 `items with boolean schemas, empty array is valid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
 `items and subitems, valid items`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `items and subitems, fewer items is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
@@ -143,7 +143,7 @@ that is the case for these tests.
 `validation of IPv6 addresses, trailing whitespace is invalid`|Expected result: `false` but validator returned: `true`
 `validation of IPv6 addresses, zone id is not a part of ipv6 address`|Expected result: `false` but validator returned: `true`
 `validation of JSON-pointers (JSON String Representation), a valid JSON-pointer`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (~ not escaped)`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`)
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (~ not escaped)`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer with empty segment`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer with the last empty segment`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer as stated in RFC 6901 #1`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
@@ -163,17 +163,17 @@ that is the case for these tests.
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer (multiple escaped characters)`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer (escaped with fraction part) #1`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer (escaped with fraction part) #2`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #1`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #2`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #3`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #1`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #2`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #1`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #2`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (multiple characters not escaped)`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #1`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #2`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #3`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`)
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #1`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #2`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #3`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #1`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #2`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #1`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #2`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (multiple characters not escaped)`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #1`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #2`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #3`|The schema failed to load(`Unknown format 'json-pointer'. Did you forget to register it?`). **This excludes this validator from performance tests**
 `validation of URI References, a valid URI`|The schema failed to load(`Unknown format 'uri-reference'. Did you forget to register it?`). **This excludes this validator from performance tests**
 `validation of URI References, a valid protocol-relative URI Reference`|The schema failed to load(`Unknown format 'uri-reference'. Did you forget to register it?`). **This excludes this validator from performance tests**
 `validation of URI References, a valid relative URI Reference`|The schema failed to load(`Unknown format 'uri-reference'. Did you forget to register it?`). **This excludes this validator from performance tests**
@@ -185,7 +185,7 @@ that is the case for these tests.
 `format: uri-template, an invalid uri-template`|The schema failed to load(`Unknown format 'uri-template'. Did you forget to register it?`)
 `format: uri-template, a valid uri-template without variables`|The schema failed to load(`Unknown format 'uri-template'. Did you forget to register it?`). **This excludes this validator from performance tests**
 `format: uri-template, a valid relative uri-template`|The schema failed to load(`Unknown format 'uri-template'. Did you forget to register it?`). **This excludes this validator from performance tests**
-`validation of URIs, an invalid URI with comma in scheme`|Expected result: `false` but validator returned: `true`
+`validation of URIs, an invalid URI with comma in scheme`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `Proper UTF-16 surrogate pair handling: pattern, matches empty`|Expected result: `true` but validator returned: `false`
 `Proper UTF-16 surrogate pair handling: pattern, matches two`|Expected result: `true` but validator returned: `false`
 `Proper UTF-16 surrogate pair handling: patternProperties, doesn't match two`|Expected result: `false` but validator returned: `true`
@@ -206,8 +206,8 @@ that is the case for these tests.
 `remote ref, containing refs itself, remote ref invalid`|The schema failed to load(`Remote refs are not supported for now :(`)
 `$ref to boolean schema true, any value is valid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
 `$ref to boolean schema false, any value is invalid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
-`Recursive references between schemas, valid tree`|The schema failed to load(`Cannot read property 'split' of undefined`). **This excludes this validator from performance tests**
-`Recursive references between schemas, invalid tree`|The schema failed to load(`Cannot read property 'split' of undefined`). **This excludes this validator from performance tests**
+`Recursive references between schemas, valid tree`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`). **This excludes this validator from performance tests**
+`Recursive references between schemas, invalid tree`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`). **This excludes this validator from performance tests**
 `refs with quote, object with numbers is valid`|The schema failed to load(`Invalid or unexpected token`). **This excludes this validator from performance tests**
 `refs with quote, object with strings is invalid`|The schema failed to load(`Invalid or unexpected token`). **This excludes this validator from performance tests**
 `Location-independent identifier, match`|The schema failed to load(`Cannot find ref '#foo' in schema`)
@@ -216,18 +216,18 @@ that is the case for these tests.
 `Location-independent identifier with absolute URI, mismatch`|The schema failed to load(`Remote refs are not supported for now :(`)
 `Location-independent identifier with base URI change in subschema, match`|The schema failed to load(`Remote refs are not supported for now :(`)
 `Location-independent identifier with base URI change in subschema, mismatch`|The schema failed to load(`Remote refs are not supported for now :(`)
-`remote ref, remote ref valid`|The schema failed to load(`Cannot read property 'split' of undefined`)
-`remote ref, remote ref invalid`|The schema failed to load(`Cannot read property 'split' of undefined`)
+`remote ref, remote ref valid`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`)
+`remote ref, remote ref invalid`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`)
 `fragment within remote ref, remote fragment valid`|The schema failed to load(`Remote refs are not supported for now :(`)
 `fragment within remote ref, remote fragment invalid`|The schema failed to load(`Remote refs are not supported for now :(`)
 `ref within remote ref, ref within ref valid`|The schema failed to load(`Remote refs are not supported for now :(`)
 `ref within remote ref, ref within ref invalid`|The schema failed to load(`Remote refs are not supported for now :(`)
-`base URI change, base URI change ref valid`|The schema failed to load(`Cannot read property 'split' of undefined`)
-`base URI change, base URI change ref invalid`|The schema failed to load(`Cannot read property 'split' of undefined`)
-`base URI change - change folder, number is valid`|The schema failed to load(`Cannot read property 'split' of undefined`)
-`base URI change - change folder, string is invalid`|The schema failed to load(`Cannot read property 'split' of undefined`)
-`base URI change - change folder in subschema, number is valid`|The schema failed to load(`Cannot read property 'split' of undefined`)
-`base URI change - change folder in subschema, string is invalid`|The schema failed to load(`Cannot read property 'split' of undefined`)
+`base URI change, base URI change ref valid`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`)
+`base URI change, base URI change ref invalid`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`)
+`base URI change - change folder, number is valid`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`)
+`base URI change - change folder, string is invalid`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`)
+`base URI change - change folder in subschema, number is valid`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`)
+`base URI change - change folder in subschema, string is invalid`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`)
 `root ref in remote ref, string is valid`|The schema failed to load(`Remote refs are not supported for now :(`)
 `root ref in remote ref, null is valid`|The schema failed to load(`Remote refs are not supported for now :(`)
 `root ref in remote ref, object is invalid`|The schema failed to load(`Remote refs are not supported for now :(`)

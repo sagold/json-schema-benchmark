@@ -59,12 +59,12 @@ that is the case for these tests.
 `float and integers are equal up to 64-bit representation limits, integer minus one is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `float and integers are equal up to 64-bit representation limits, float minus one is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `nul characters in strings, do not match string lacking nul`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`contains keyword validation, array without items matching schema is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword validation, empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with const keyword, array without item 5 is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema true, empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema false, any non-empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema false, empty array is invalid`|Expected result: `false` but validator returned: `true`
+`contains keyword validation, array without items matching schema is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword validation, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with const keyword, array without item 5 is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema true, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema false, any non-empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema false, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `items + contains, matches items, does not match contains`|Expected result: `false` but validator returned: `true`
 `dependencies with boolean subschemas, object with property having schema false is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `dependencies with boolean subschemas, object with both properties is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
@@ -87,8 +87,8 @@ that is the case for these tests.
 `if with boolean schema false, boolean schema false in if always chooses the else path (invalid)`|Expected result: `false` but validator returned: `true`
 `if appears at the end when serialized (keyword processing sequence), no redirects to then and fails`|Expected result: `false` but validator returned: `true`
 `if appears at the end when serialized (keyword processing sequence), invalid redirects to else and fails`|Expected result: `false` but validator returned: `true`
-`items with boolean schema (false), any non-empty array is invalid`|Expected result: `false` but validator returned: `true`
-`items with boolean schemas, array with two items is invalid`|Expected result: `false` but validator returned: `true`
+`items with boolean schema (false), any non-empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`items with boolean schemas, array with two items is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `not with boolean schema true, any value is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `oneOf with boolean schemas, one true, any value is valid`|Expected result: `true` but validator returned: `false`
 `float comparison with high precision, comparison works for high numbers`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
@@ -148,18 +148,18 @@ that is the case for these tests.
 `validation of IRIs, an invalid relative IRI Reference`|Expected result: `false` but validator returned: `true`
 `validation of IRIs, an invalid IRI`|Expected result: `false` but validator returned: `true`
 `validation of IRIs, an invalid IRI though valid IRI reference`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (~ not escaped)`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #1`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #2`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #3`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #1`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #2`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #1`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #2`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (multiple characters not escaped)`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #1`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #2`|Expected result: `false` but validator returned: `true`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #3`|Expected result: `false` but validator returned: `true`
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (~ not escaped)`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #1`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #2`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #3`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #1`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #2`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #1`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #2`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (multiple characters not escaped)`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #1`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #2`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #3`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `validation of regular expressions, a regular expression with unclosed parens is invalid`|Expected result: `false` but validator returned: `true`
 `validation of Relative JSON Pointers (RJP), an invalid RJP that is a valid JSON Pointer`|Expected result: `false` but validator returned: `true`
 `validation of Relative JSON Pointers (RJP), negative prefix`|Expected result: `false` but validator returned: `true`

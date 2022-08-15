@@ -59,12 +59,12 @@ that is the case for these tests.
 `float and integers are equal up to 64-bit representation limits, integer minus one is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `float and integers are equal up to 64-bit representation limits, float minus one is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `nul characters in strings, do not match string lacking nul`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`contains keyword validation, array without items matching schema is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword validation, empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with const keyword, array without item 5 is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema true, empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema false, any non-empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema false, empty array is invalid`|Expected result: `false` but validator returned: `true`
+`contains keyword validation, array without items matching schema is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword validation, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with const keyword, array without item 5 is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema true, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema false, any non-empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema false, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `items + contains, matches items, does not match contains`|Expected result: `false` but validator returned: `true`
 `valid definition, valid definition schema`|Expected result: `true` but validator returned: `"validators.http://json-schema.org/draft-06/schema# is not a function"`
 `invalid definition, invalid definition schema`|Expected result: `false` but validator returned: `"validators.http://json-schema.org/draft-06/schema# is not a function"`
@@ -89,8 +89,8 @@ that is the case for these tests.
 `exclusiveMaximum validation, above the exclusiveMaximum is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `exclusiveMinimum validation, boundary point is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `exclusiveMinimum validation, below the exclusiveMinimum is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`items with boolean schema (false), any non-empty array is invalid`|Expected result: `false` but validator returned: `true`
-`items with boolean schemas, array with two items is invalid`|Expected result: `false` but validator returned: `true`
+`items with boolean schema (false), any non-empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`items with boolean schemas, array with two items is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `items and subitems, valid items`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `items and subitems, fewer items is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `not with boolean schema true, any value is invalid`|Expected result: `false` but validator returned: `"validators.0#/not is not a function"`. **This excludes this validator from performance tests**
@@ -105,7 +105,7 @@ that is the case for these tests.
 `validation of IPv6 addresses, trailing whitespace is invalid`|Expected result: `false` but validator returned: `true`
 `validation of IPv6 addresses, zone id is not a part of ipv6 address`|Expected result: `false` but validator returned: `true`
 `validation of JSON-pointers (JSON String Representation), a valid JSON-pointer`|Expected result: `true` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (~ not escaped)`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (~ not escaped)`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer with empty segment`|Expected result: `true` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer with the last empty segment`|Expected result: `true` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer as stated in RFC 6901 #1`|Expected result: `true` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
@@ -125,17 +125,17 @@ that is the case for these tests.
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer (multiple escaped characters)`|Expected result: `true` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer (escaped with fraction part) #1`|Expected result: `true` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer (escaped with fraction part) #2`|Expected result: `true` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #1`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #2`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #3`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #1`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #2`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #1`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #2`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (multiple characters not escaped)`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #1`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #2`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #3`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #1`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #2`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #3`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #1`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #2`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #1`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #2`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (multiple characters not escaped)`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #1`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #2`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #3`|Expected result: `false` but validator returned: `"_format.json-pointer is not a function"`. **This excludes this validator from performance tests**
 `validation of URI References, a valid URI`|Expected result: `true` but validator returned: `"_format.uri-reference is not a function"`. **This excludes this validator from performance tests**
 `validation of URI References, a valid protocol-relative URI Reference`|Expected result: `true` but validator returned: `"_format.uri-reference is not a function"`. **This excludes this validator from performance tests**
 `validation of URI References, a valid relative URI Reference`|Expected result: `true` but validator returned: `"_format.uri-reference is not a function"`. **This excludes this validator from performance tests**
@@ -175,10 +175,10 @@ that is the case for these tests.
 `refs with quote, object with strings is invalid`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
 `Location-independent identifier, match`|Expected result: `true` but validator returned: `"validators.#foo is not a function"`
 `Location-independent identifier, mismatch`|Expected result: `false` but validator returned: `"validators.#foo is not a function"`
-`Location-independent identifier with absolute URI, match`|The schema failed to load(`Cannot read property 'oo' of undefined`)
-`Location-independent identifier with absolute URI, mismatch`|The schema failed to load(`Cannot read property 'oo' of undefined`)
-`Location-independent identifier with base URI change in subschema, match`|The schema failed to load(`Cannot read property 'oo' of undefined`)
-`Location-independent identifier with base URI change in subschema, mismatch`|The schema failed to load(`Cannot read property 'oo' of undefined`)
+`Location-independent identifier with absolute URI, match`|The schema failed to load(`Cannot read properties of undefined (reading 'oo')`)
+`Location-independent identifier with absolute URI, mismatch`|The schema failed to load(`Cannot read properties of undefined (reading 'oo')`)
+`Location-independent identifier with base URI change in subschema, match`|The schema failed to load(`Cannot read properties of undefined (reading 'oo')`)
+`Location-independent identifier with base URI change in subschema, mismatch`|The schema failed to load(`Cannot read properties of undefined (reading 'oo')`)
 `remote ref, remote ref valid`|Expected result: `true` but validator returned: `"validators.http://localhost:1234/integer.json is not a function"`
 `remote ref, remote ref invalid`|Expected result: `false` but validator returned: `"validators.http://localhost:1234/integer.json is not a function"`
 `fragment within remote ref, remote fragment valid`|Expected result: `true` but validator returned: `"validators.http://localhost:1234/subSchemas.json#/integer is not a function"`
@@ -191,9 +191,9 @@ that is the case for these tests.
 `base URI change - change folder, string is invalid`|The schema failed to load(`invalid ref: folderInteger.json in 0`)
 `base URI change - change folder in subschema, number is valid`|The schema failed to load(`invalid ref: folderInteger.json in 0`)
 `base URI change - change folder in subschema, string is invalid`|The schema failed to load(`invalid ref: folderInteger.json in 0`)
-`root ref in remote ref, string is valid`|The schema failed to load(`Cannot read property 'definitions' of undefined`)
-`root ref in remote ref, null is valid`|The schema failed to load(`Cannot read property 'definitions' of undefined`)
-`root ref in remote ref, object is invalid`|The schema failed to load(`Cannot read property 'definitions' of undefined`)
+`root ref in remote ref, string is valid`|The schema failed to load(`Cannot read properties of undefined (reading 'definitions')`)
+`root ref in remote ref, null is valid`|The schema failed to load(`Cannot read properties of undefined (reading 'definitions')`)
+`root ref in remote ref, object is invalid`|The schema failed to load(`Cannot read properties of undefined (reading 'definitions')`)
 `required with escaped characters, object with all properties present is valid`|The schema failed to load(`Invalid or unexpected token`). **This excludes this validator from performance tests**
 `required with escaped characters, object with some properties missing is invalid`|The schema failed to load(`Invalid or unexpected token`). **This excludes this validator from performance tests**
 `uniqueItems validation, objects are non-unique despite key order`|Expected result: `false` but validator returned: `true`

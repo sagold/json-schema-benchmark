@@ -19,7 +19,6 @@ that is the case for these tests.
 `validation of IPv6 addresses, leading whitespace is invalid`|Expected result: `false` but validator returned: `true`
 `validation of IPv6 addresses, trailing whitespace is invalid`|Expected result: `false` but validator returned: `true`
 `validation of IPv6 addresses, zone id is not a part of ipv6 address`|Expected result: `false` but validator returned: `true`
-`validation of URIs, an invalid URI with comma in scheme`|Expected result: `false` but validator returned: `true`
 `remote ref, containing refs itself, remote ref valid`|Expected result: `true` but validator returned: `"no such schema <http://json-schema.org/draft-04/schema#>"`
 `remote ref, containing refs itself, remote ref invalid`|Expected result: `false` but validator returned: `"no such schema <http://json-schema.org/draft-04/schema#>"`
 `base URI change - change folder, number is valid`|Expected result: `true` but validator returned: `"no such schema <http://localhost:1234/folderInteger.json>"`

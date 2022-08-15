@@ -41,7 +41,7 @@ that is the case for these tests.
 `validation of IPv6 addresses, ignores null`|Expected result: `true` but validator returned: `false`
 `validation of hostnames, ignores objects`|Expected result: `true` but validator returned: `false`
 `validation of hostnames, ignores arrays`|Expected result: `true` but validator returned: `false`
-`validation of hostnames, ignores null`|Expected result: `true` but validator returned: `"Cannot read property 'length' of null"`
+`validation of hostnames, ignores null`|Expected result: `true` but validator returned: `"Cannot read properties of null (reading 'length')"`
 `validation of date-time strings, ignores integers`|Expected result: `true` but validator returned: `"data.indexOf is not a function"`
 `validation of date-time strings, ignores floats`|Expected result: `true` but validator returned: `false`
 `validation of date-time strings, ignores objects`|Expected result: `true` but validator returned: `false`

@@ -31,9 +31,9 @@ that is the case for these tests.
 `an array of schemas for items, incomplete array of items`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `an array of schemas for items, empty array`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `items and subitems, fewer items is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
-`nested items, valid nested array`|Expected result: `true` but validator returned: `"Cannot read property '1' of undefined"`. **This excludes this validator from performance tests**
-`nested items, nested array with invalid type`|Expected result: `false` but validator returned: `"Cannot read property '1' of undefined"`. **This excludes this validator from performance tests**
-`nested items, not deep enough`|Expected result: `false` but validator returned: `"Cannot read property 'length' of undefined"`. **This excludes this validator from performance tests**
+`nested items, valid nested array`|Expected result: `true` but validator returned: `"Cannot read properties of undefined (reading '1')"`. **This excludes this validator from performance tests**
+`nested items, nested array with invalid type`|Expected result: `false` but validator returned: `"Cannot read properties of undefined (reading '1')"`. **This excludes this validator from performance tests**
+`nested items, not deep enough`|Expected result: `false` but validator returned: `"Cannot read properties of undefined (reading 'length')"`. **This excludes this validator from performance tests**
 `not, disallowed`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `not multiple types, mismatch`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `not multiple types, other mismatch`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**

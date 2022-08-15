@@ -38,8 +38,8 @@ that is the case for these tests.
 `const with object, another type is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `const with array, another array item is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `const with array, array with additional items is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`const with null, null is valid`|The schema failed to load(`Cannot read property 'type' of null`). **This excludes this validator from performance tests**
-`const with null, not null is invalid`|The schema failed to load(`Cannot read property 'type' of null`). **This excludes this validator from performance tests**
+`const with null, null is valid`|The schema failed to load(`Cannot read properties of null (reading 'type')`). **This excludes this validator from performance tests**
+`const with null, not null is invalid`|The schema failed to load(`Cannot read properties of null (reading 'type')`). **This excludes this validator from performance tests**
 `const with false does not match 0, integer zero is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `const with false does not match 0, float zero is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `const with true does not match 1, integer one is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
@@ -63,12 +63,12 @@ that is the case for these tests.
 `float and integers are equal up to 64-bit representation limits, integer minus one is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `float and integers are equal up to 64-bit representation limits, float minus one is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `nul characters in strings, do not match string lacking nul`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`contains keyword validation, array without items matching schema is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword validation, empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with const keyword, array without item 5 is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema true, empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema false, any non-empty array is invalid`|Expected result: `false` but validator returned: `true`
-`contains keyword with boolean schema false, empty array is invalid`|Expected result: `false` but validator returned: `true`
+`contains keyword validation, array without items matching schema is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword validation, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with const keyword, array without item 5 is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema true, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema false, any non-empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`contains keyword with boolean schema false, empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `items + contains, matches items, does not match contains`|Expected result: `false` but validator returned: `true`
 `valid definition, valid definition schema`|The schema failed to load(`Unresolvable $ref values: ["http://json-schema.org/draft-06/schema#"]`)
 `invalid definition, invalid definition schema`|The schema failed to load(`Unresolvable $ref values: ["http://json-schema.org/draft-06/schema#"]`)
@@ -107,10 +107,10 @@ that is the case for these tests.
 `a schema given for items, JavaScript pseudo-array is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `items with boolean schema (true), any array is valid`|The schema failed to load(`Schema must be an object - #/items`). **This excludes this validator from performance tests**
 `items with boolean schema (true), empty array is valid`|The schema failed to load(`Schema must be an object - #/items`). **This excludes this validator from performance tests**
-`items with boolean schema (false), any non-empty array is invalid`|The schema failed to load(`Schema must be an object - #/items`)
+`items with boolean schema (false), any non-empty array is invalid`|The schema failed to load(`Schema must be an object - #/items`). **This excludes this validator from performance tests**
 `items with boolean schema (false), empty array is valid`|The schema failed to load(`Schema must be an object - #/items`). **This excludes this validator from performance tests**
 `items with boolean schemas, array with one item is valid`|The schema failed to load(`Schema must be an object - #/items/0`). **This excludes this validator from performance tests**
-`items with boolean schemas, array with two items is invalid`|The schema failed to load(`Schema must be an object - #/items/0`)
+`items with boolean schemas, array with two items is invalid`|The schema failed to load(`Schema must be an object - #/items/0`). **This excludes this validator from performance tests**
 `items with boolean schemas, empty array is valid`|The schema failed to load(`Schema must be an object - #/items/0`). **This excludes this validator from performance tests**
 `maxLength validation, two supplementary Unicode code points is long enough`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `minLength validation, one supplementary Unicode code point is not long enough`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
@@ -134,7 +134,7 @@ that is the case for these tests.
 `validation of IPv6 addresses, trailing whitespace is invalid`|Expected result: `false` but validator returned: `true`
 `validation of IPv6 addresses, zone id is not a part of ipv6 address`|Expected result: `false` but validator returned: `true`
 `validation of JSON-pointers (JSON String Representation), a valid JSON-pointer`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (~ not escaped)`|The schema failed to load(`Invalid format_name for 'format'`)
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (~ not escaped)`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer with empty segment`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer with the last empty segment`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer as stated in RFC 6901 #1`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
@@ -154,17 +154,17 @@ that is the case for these tests.
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer (multiple escaped characters)`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer (escaped with fraction part) #1`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
 `validation of JSON-pointers (JSON String Representation), valid JSON-pointer (escaped with fraction part) #2`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #1`|The schema failed to load(`Invalid format_name for 'format'`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #2`|The schema failed to load(`Invalid format_name for 'format'`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #3`|The schema failed to load(`Invalid format_name for 'format'`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #1`|The schema failed to load(`Invalid format_name for 'format'`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #2`|The schema failed to load(`Invalid format_name for 'format'`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #1`|The schema failed to load(`Invalid format_name for 'format'`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #2`|The schema failed to load(`Invalid format_name for 'format'`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (multiple characters not escaped)`|The schema failed to load(`Invalid format_name for 'format'`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #1`|The schema failed to load(`Invalid format_name for 'format'`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #2`|The schema failed to load(`Invalid format_name for 'format'`)
-`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #3`|The schema failed to load(`Invalid format_name for 'format'`)
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #1`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #2`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (URI Fragment Identifier) #3`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #1`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (some escaped, but not all) #2`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #1`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (wrong escape character) #2`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (multiple characters not escaped)`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #1`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #2`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
+`validation of JSON-pointers (JSON String Representation), not a valid JSON-pointer (isn't empty nor starts with /) #3`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
 `validation of URI References, a valid URI`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
 `validation of URI References, a valid protocol-relative URI Reference`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
 `validation of URI References, a valid relative URI Reference`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
@@ -176,7 +176,7 @@ that is the case for these tests.
 `format: uri-template, an invalid uri-template`|The schema failed to load(`Invalid format_name for 'format'`)
 `format: uri-template, a valid uri-template without variables`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
 `format: uri-template, a valid relative uri-template`|The schema failed to load(`Invalid format_name for 'format'`). **This excludes this validator from performance tests**
-`validation of URIs, an invalid URI with comma in scheme`|Expected result: `false` but validator returned: `true`
+`validation of URIs, an invalid URI with comma in scheme`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `Proper UTF-16 surrogate pair handling: pattern, matches empty`|Expected result: `true` but validator returned: `false`
 `Proper UTF-16 surrogate pair handling: pattern, matches two`|Expected result: `true` but validator returned: `false`
 `Proper UTF-16 surrogate pair handling: patternProperties, doesn't match two`|Expected result: `false` but validator returned: `true`
