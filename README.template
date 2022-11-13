@@ -7,6 +7,8 @@ Performance benchmark for Node.js JSON-schema validators.
 > - updated ajv setup and integrated ajv formats plugin
 > - changed default draft to draft 07
 > - updated benchmark results
+>
+> [2022/11/13] updated libraries and rerun benchmark
 
 Also tests against [official JSON-schema test suite](https://github.com/json-schema/JSON-Schema-Test-Suite), version {{schemaVersion}}. and checks
 for validators that cause side-effects on schema or data. The top 6 validators that fail the least tests are included in the benchmark.
