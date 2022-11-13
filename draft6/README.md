@@ -7,6 +7,8 @@ Performance benchmark for Node.js JSON-schema validators.
 > - updated ajv setup and integrated ajv formats plugin
 > - changed default draft to draft 07
 > - updated benchmark results
+>
+> [2022/11/13] updated libraries and rerun benchmark
 
 Also tests against [official JSON-schema test suite](https://github.com/json-schema/JSON-Schema-Test-Suite), version draft6. and checks
 for validators that cause side-effects on schema or data. The top 6 validators that fail the least tests are included in the benchmark.
@@ -15,16 +17,16 @@ for validators that cause side-effects on schema or data. The top 6 validators t
 
 # Performance
 
-![performance](https://chart.googleapis.com/chart?chxt=x,y&cht=bhs&chco=76A4FB&chls=2.0&chbh=62,4,1&chs=600x416&chxl=-1:|@exodus&#x2F;schemasafe|ajv|djv|@cfworker&#x2F;json-schema|json-schema-library|jsonschema&chd=t:100,60.8,11.3,4.6,1.9,1)
+![performance](https://chart.googleapis.com/chart?chxt=x,y&cht=bhs&chco=76A4FB&chls=2.0&chbh=62,4,1&chs=600x416&chxl=-1:|@exodus&#x2F;schemasafe|ajv|djv|@cfworker&#x2F;json-schema|json-schema-library|jsonschema&chd=t:100,56.5,9.9,4.4,1.8,0.9)
 
 |Validator|Relative speed|Number of test runs per second|
 |---------|:------------:|:----------------------------:|
-|[`@exodus/schemasafe`](https://github.com/ExodusMovement/schemasafe)|100%|9072 (± 3.91%)|
-|[`ajv`](https://ajv.js.org)|60.8%|5518 (± 7.86%)|
-|[`djv`](https://github.com/korzio/djv#readme)|11.3%|1022 (± 2.05%)|
-|[`@cfworker/json-schema`](https://github.com/cfworker/cfworker/tree/master/packages/json-schema/README.md)|4.6%|416 (± 1.76%)|
-|[`json-schema-library`](https://github.com/sagold/json-schema-library)|1.9%|173 (± 1.64%)|
-|[`jsonschema`](https://github.com/tdegrunt/jsonschema#readme)|1%|93 (± 1.72%)|
+|[`@exodus/schemasafe`](https://github.com/ExodusMovement/schemasafe)|100%|9279 (± 3.82%)|
+|[`ajv`](https://ajv.js.org)|56.5%|5246 (± 12%)|
+|[`djv`](https://github.com/korzio/djv#readme)|9.9%|921 (± 2.58%)|
+|[`@cfworker/json-schema`](https://github.com/cfworker/cfworker/tree/master/packages/json-schema/README.md)|4.4%|409 (± 1.95%)|
+|[`json-schema-library`](https://github.com/sagold/json-schema-library)|1.8%|170 (± 1.78%)|
+|[`jsonschema`](https://github.com/tdegrunt/jsonschema#readme)|0.9%|83 (± 2.61%)|
 
 884 tests are run in each test run.
 
