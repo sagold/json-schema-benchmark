@@ -47,8 +47,8 @@ that is the case for these tests.
 `remote ref, containing refs itself, remote ref invalid`|Expected result: `false` but validator returned: `"validators.http://json-schema.org/draft-04/schema# is not a function"`
 `Recursive references between schemas, valid tree`|The schema failed to load(`Cannot read properties of undefined (reading '0')`)
 `Recursive references between schemas, invalid tree`|The schema failed to load(`Cannot read properties of undefined (reading '0')`)
-`refs with quote, object with numbers is valid`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
-`refs with quote, object with strings is invalid`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
+`refs with quote, object with numbers is valid`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
+`refs with quote, object with strings is invalid`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
 `Location-independent identifier with base URI change in subschema, match`|The schema failed to load(`Cannot read properties of undefined (reading 'oo')`)
 `Location-independent identifier with base URI change in subschema, mismatch`|The schema failed to load(`Cannot read properties of undefined (reading 'oo')`)
 `remote ref, remote ref valid`|Expected result: `true` but validator returned: `"validators.http://localhost:1234/integer.json is not a function"`. **This excludes this validator from performance tests**

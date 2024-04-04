@@ -257,8 +257,8 @@ that is the case for these tests.
 `$ref to boolean schema false, any value is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `Recursive references between schemas, valid tree`|The schema failed to load(`invalid ref: node in 0`). **This excludes this validator from performance tests**
 `Recursive references between schemas, invalid tree`|The schema failed to load(`invalid ref: node in 0`). **This excludes this validator from performance tests**
-`refs with quote, object with numbers is valid`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
-`refs with quote, object with strings is invalid`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
+`refs with quote, object with numbers is valid`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
+`refs with quote, object with strings is invalid`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
 `Location-independent identifier, match`|Expected result: `true` but validator returned: `"validators.#foo is not a function"`
 `Location-independent identifier, mismatch`|Expected result: `false` but validator returned: `"validators.#foo is not a function"`
 `Location-independent identifier with absolute URI, match`|The schema failed to load(`Cannot read properties of undefined (reading 'oo')`)

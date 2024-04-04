@@ -49,9 +49,6 @@ that is the case for these tests.
 `validation of IRIs, an invalid relative IRI Reference`|Expected result: `false` but validator returned: `true`
 `validation of IRIs, an invalid IRI`|Expected result: `false` but validator returned: `true`
 `validation of IRIs, an invalid IRI though valid IRI reference`|Expected result: `false` but validator returned: `true`
-`Proper UTF-16 surrogate pair handling: pattern, matches empty`|Expected result: `true` but validator returned: `false`
-`Proper UTF-16 surrogate pair handling: pattern, matches two`|Expected result: `true` but validator returned: `false`
-`Proper UTF-16 surrogate pair handling: patternProperties, doesn't match two`|Expected result: `false` but validator returned: `true`
 
 **All other tests passed**.
 

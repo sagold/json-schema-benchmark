@@ -76,13 +76,13 @@ that is the case for these tests.
 `dependencies with boolean subschemas, object with property having schema false is invalid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
 `dependencies with boolean subschemas, object with both properties is invalid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
 `dependencies with boolean subschemas, empty object is valid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
-`dependencies with escaped characters, valid object 1`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
-`dependencies with escaped characters, valid object 2`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
-`dependencies with escaped characters, valid object 3`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
-`dependencies with escaped characters, invalid object 1`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
-`dependencies with escaped characters, invalid object 2`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
-`dependencies with escaped characters, invalid object 3`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
-`dependencies with escaped characters, invalid object 4`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
+`dependencies with escaped characters, valid object 1`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
+`dependencies with escaped characters, valid object 2`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
+`dependencies with escaped characters, valid object 3`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
+`dependencies with escaped characters, invalid object 1`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
+`dependencies with escaped characters, invalid object 2`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
+`dependencies with escaped characters, invalid object 3`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
+`dependencies with escaped characters, invalid object 4`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
 `exclusiveMaximum validation, boundary point is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `exclusiveMaximum validation, above the exclusiveMaximum is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `exclusiveMinimum validation, boundary point is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
@@ -339,8 +339,8 @@ that is the case for these tests.
 `properties with boolean schema, only 'true' property present is valid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
 `properties with boolean schema, only 'false' property present is invalid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
 `properties with boolean schema, both properties present is invalid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
-`properties with escaped characters, object with all numbers is valid`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
-`properties with escaped characters, object with strings is invalid`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
+`properties with escaped characters, object with all numbers is valid`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
+`properties with escaped characters, object with strings is invalid`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
 `propertyNames validation, some property names invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `propertyNames with boolean schema false, object with any properties is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `remote ref, containing refs itself, remote ref valid`|The schema failed to load(`Remote refs are not supported for now :(`). **This excludes this validator from performance tests**

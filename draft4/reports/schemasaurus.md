@@ -14,13 +14,13 @@ that is the case for these tests.
 `additionalItems should not look in applicators, valid case, items defined in allOf are not examined`|The schema failed to load(`Cannot read properties of undefined (reading '$$visited')`). **This excludes this validator from performance tests**
 `valid definition, valid definition schema`|The schema failed to load(`Remote refs are not supported for now :(`)
 `invalid definition, invalid definition schema`|The schema failed to load(`Remote refs are not supported for now :(`)
-`dependencies with escaped characters, valid object 1`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
-`dependencies with escaped characters, valid object 2`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
-`dependencies with escaped characters, valid object 3`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
-`dependencies with escaped characters, invalid object 1`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
-`dependencies with escaped characters, invalid object 2`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
-`dependencies with escaped characters, invalid object 3`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
-`dependencies with escaped characters, invalid object 4`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
+`dependencies with escaped characters, valid object 1`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
+`dependencies with escaped characters, valid object 2`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
+`dependencies with escaped characters, valid object 3`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
+`dependencies with escaped characters, invalid object 1`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
+`dependencies with escaped characters, invalid object 2`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
+`dependencies with escaped characters, invalid object 3`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
+`dependencies with escaped characters, invalid object 4`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
 `evaluating the same schema location against the same data location twice is not a sign of an infinite loop, passing case`|The schema failed to load(`Cannot find ref '#/definitions/int' in schema`). **This excludes this validator from performance tests**
 `evaluating the same schema location against the same data location twice is not a sign of an infinite loop, failing case`|The schema failed to load(`Cannot find ref '#/definitions/int' in schema`). **This excludes this validator from performance tests**
 `a schema given for items, JavaScript pseudo-array is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
@@ -44,8 +44,8 @@ that is the case for these tests.
 `Proper UTF-16 surrogate pair handling: pattern, matches empty`|Expected result: `true` but validator returned: `false`
 `Proper UTF-16 surrogate pair handling: pattern, matches two`|Expected result: `true` but validator returned: `false`
 `Proper UTF-16 surrogate pair handling: patternProperties, doesn't match two`|Expected result: `false` but validator returned: `true`
-`properties with escaped characters, object with all numbers is valid`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
-`properties with escaped characters, object with strings is invalid`|The schema failed to load(`Unexpected identifier`). **This excludes this validator from performance tests**
+`properties with escaped characters, object with all numbers is valid`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
+`properties with escaped characters, object with strings is invalid`|The schema failed to load(`Unexpected identifier 'bar'`). **This excludes this validator from performance tests**
 `remote ref, containing refs itself, remote ref valid`|The schema failed to load(`Remote refs are not supported for now :(`)
 `remote ref, containing refs itself, remote ref invalid`|The schema failed to load(`Remote refs are not supported for now :(`)
 `Recursive references between schemas, valid tree`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`)
