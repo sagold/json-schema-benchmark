@@ -45,11 +45,31 @@ module.exports = async function validators(draftUri, draftVersion) {
     {
       "http://json-schema.org/draft-06/schema": require("./refs/json-schema-draft-06.json"),
       "http://json-schema.org/draft-07/schema": require("./refs/json-schema-draft-07.json"),
+      "https://json-schema.org/draft/2019-09/schema": require("./refs/draft2019-09.json"),
+      "https://json-schema.org/draft/2019-09/meta/applicator": require("./refs/draft2019-09_meta_applicator.json"),
+      "https://json-schema.org/draft/2019-09/meta/content": require("./refs/draft2019-09_meta_content.json"),
+      "https://json-schema.org/draft/2019-09/meta/core": require("./refs/draft2019-09_meta_core.json"),
+      "https://json-schema.org/draft/2019-09/meta/format": require("./refs/draft2019-09_meta_format.json"),
+      "https://json-schema.org/draft/2019-09/meta/meta-data": require("./refs/draft2019-09_meta_meta-data.json"),
+      "https://json-schema.org/draft/2019-09/meta/validation": require("./refs/draft2019-09_meta_validation.json"),
+      "https://json-schema.org/draft/2020-12/schema": require("./refs/draft2020-12.json"),
+      "https://json-schema.org/draft/2020-12/meta/applicator": require("./refs/draft2020-12_meta_applicator.json"),
+      "https://json-schema.org/draft/2020-12/meta/content": require("./refs/draft2020-12_meta_content.json"),
+      "https://json-schema.org/draft/2020-12/meta/core": require("./refs/draft2020-12_meta_core.json"),
+      "https://json-schema.org/draft/2020-12/meta/format-annotation": require("./refs/draft2020-12_meta_format_annotation.json"),
+      "https://json-schema.org/draft/2020-12/meta/format-assertion": require("./refs/draft2020-12_meta_format_assertion.json"),
+      "https://json-schema.org/draft/2020-12/meta/meta-data": require("./refs/draft2020-12_meta_meta_data.json"),
+      "https://json-schema.org/draft/2020-12/meta/unevaluated": require("./refs/draft2020-12_meta_unevaluated.json"),
+      "https://json-schema.org/draft/2020-12/meta/validation": require("./refs/draft2020-12_meta_validation.json"),
     }
   );
 
   Object.keys(refs).forEach(function (uri) {
-    djv.addSchema(uri, refs[uri]);
+    try {
+      djv.addSchema(uri, refs[uri]);
+    } catch (e) {
+      // ignore
+    }
   });
 
   const validators = [
