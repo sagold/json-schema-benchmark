@@ -65,7 +65,7 @@ that is the case for these tests.
 `exclusiveMinimum validation, boundary point is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `exclusiveMinimum validation, below the exclusiveMinimum is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `items with boolean schema (false), any non-empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`items with boolean schemas, array with two items is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`items with boolean schemas, array with two items is invalid`|Expected result: `false` but validator returned: `true`
 `maxLength validation, two supplementary Unicode code points is long enough`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `minLength validation, one supplementary Unicode code point is not long enough`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `invalid instance should not raise error when float division = inf, always invalid, but naive implementations may raise an overflow error`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**

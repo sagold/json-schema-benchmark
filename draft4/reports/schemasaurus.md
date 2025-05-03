@@ -53,16 +53,16 @@ that is the case for these tests.
 `refs with quote, object with numbers is valid`|The schema failed to load(`Invalid or unexpected token`). **This excludes this validator from performance tests**
 `refs with quote, object with strings is invalid`|The schema failed to load(`Invalid or unexpected token`). **This excludes this validator from performance tests**
 `Location-independent identifier, match`|The schema failed to load(`Cannot find ref '#foo' in schema`). **This excludes this validator from performance tests**
-`Location-independent identifier, mismatch`|The schema failed to load(`Cannot find ref '#foo' in schema`). **This excludes this validator from performance tests**
+`Location-independent identifier, mismatch`|The schema failed to load(`Cannot find ref '#foo' in schema`)
 `Location-independent identifier with absolute URI, match`|The schema failed to load(`Remote refs are not supported for now :(`)
-`Location-independent identifier with absolute URI, mismatch`|The schema failed to load(`Remote refs are not supported for now :(`). **This excludes this validator from performance tests**
+`Location-independent identifier with absolute URI, mismatch`|The schema failed to load(`Remote refs are not supported for now :(`)
 `Location-independent identifier with base URI change in subschema, match`|The schema failed to load(`Remote refs are not supported for now :(`)
 `Location-independent identifier with base URI change in subschema, mismatch`|The schema failed to load(`Remote refs are not supported for now :(`)
 `remote ref, remote ref valid`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`). **This excludes this validator from performance tests**
 `remote ref, remote ref invalid`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`). **This excludes this validator from performance tests**
 `fragment within remote ref, remote fragment valid`|The schema failed to load(`Remote refs are not supported for now :(`). **This excludes this validator from performance tests**
 `fragment within remote ref, remote fragment invalid`|The schema failed to load(`Remote refs are not supported for now :(`). **This excludes this validator from performance tests**
-`ref within remote ref, ref within ref valid`|The schema failed to load(`Remote refs are not supported for now :(`)
+`ref within remote ref, ref within ref valid`|The schema failed to load(`Remote refs are not supported for now :(`). **This excludes this validator from performance tests**
 `ref within remote ref, ref within ref invalid`|The schema failed to load(`Remote refs are not supported for now :(`)
 `base URI change, base URI change ref valid`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`). **This excludes this validator from performance tests**
 `base URI change, base URI change ref invalid`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`)
@@ -70,7 +70,7 @@ that is the case for these tests.
 `base URI change - change folder, string is invalid`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`)
 `base URI change - change folder in subschema, number is valid`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`)
 `base URI change - change folder in subschema, string is invalid`|The schema failed to load(`Cannot read properties of undefined (reading 'split')`)
-`root ref in remote ref, string is valid`|The schema failed to load(`Remote refs are not supported for now :(`)
+`root ref in remote ref, string is valid`|The schema failed to load(`Remote refs are not supported for now :(`). **This excludes this validator from performance tests**
 `root ref in remote ref, null is valid`|The schema failed to load(`Remote refs are not supported for now :(`). **This excludes this validator from performance tests**
 `root ref in remote ref, object is invalid`|The schema failed to load(`Remote refs are not supported for now :(`)
 `uniqueItems validation, unique heterogeneous types are valid`|Expected result: `true` but validator returned: `false`

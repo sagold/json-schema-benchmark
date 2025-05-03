@@ -181,7 +181,7 @@ that is the case for these tests.
 `items with boolean schema (true), empty array is valid`|Expected result: `true` but validator returned: `"Invalid schema: invalid \"items\""`. **This excludes this validator from performance tests**
 `items with boolean schema (false), any non-empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `items with boolean schemas, array with one item is valid`|Expected result: `true` but validator returned: `"Cannot use 'in' operator to search for 'type' in true"`. **This excludes this validator from performance tests**
-`items with boolean schemas, array with two items is invalid`|Expected result: `false` but validator returned: `"Cannot use 'in' operator to search for 'type' in true"`. **This excludes this validator from performance tests**
+`items with boolean schemas, array with two items is invalid`|Expected result: `false` but validator returned: `"Cannot use 'in' operator to search for 'type' in true"`
 `not with boolean schema true, any value is invalid`|Expected result: `false` but validator returned: `"Cannot use 'in' operator to search for 'type' in true"`. **This excludes this validator from performance tests**
 `not with boolean schema false, any value is valid`|Expected result: `true` but validator returned: `"Cannot use 'in' operator to search for 'type' in false"`
 `oneOf with boolean schemas, all true, any value is invalid`|Expected result: `false` but validator returned: `"Cannot use 'in' operator to search for 'type' in true"`. **This excludes this validator from performance tests**

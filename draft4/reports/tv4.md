@@ -71,7 +71,7 @@ that is the case for these tests.
 `Proper UTF-16 surrogate pair handling: patternProperties, doesn't match two`|Expected result: `false` but validator returned: `true`
 `remote ref, containing refs itself, remote ref invalid`|Expected result: `false` but validator returned: `true`
 `Recursive references between schemas, invalid tree`|Expected result: `false` but validator returned: `true`
-`Location-independent identifier with absolute URI, mismatch`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`Location-independent identifier with absolute URI, mismatch`|Expected result: `false` but validator returned: `true`
 `Location-independent identifier with base URI change in subschema, mismatch`|Expected result: `false` but validator returned: `true`
 `remote ref, remote ref invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `fragment within remote ref, remote fragment invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**

@@ -169,7 +169,7 @@ that is the case for these tests.
 `items with boolean schema (true), empty array is valid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
 `items with boolean schema (false), any non-empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `items with boolean schemas, array with one item is valid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
-`items with boolean schemas, array with two items is invalid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
+`items with boolean schemas, array with two items is invalid`|The schema failed to load(`Object.defineProperty called on non-object`)
 `items with boolean schemas, empty array is valid`|The schema failed to load(`Object.defineProperty called on non-object`). **This excludes this validator from performance tests**
 `items and subitems, valid items`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `items and subitems, fewer items is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**

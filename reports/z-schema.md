@@ -145,7 +145,7 @@ that is the case for these tests.
 `items with boolean schema (true), empty array is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `items with boolean schema (false), empty array is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `items with boolean schemas, array with one item is valid`|Expected result: `true` but validator returned: `"Cannot create property '__$validated' on boolean 'false'"`. **This excludes this validator from performance tests**
-`items with boolean schemas, array with two items is invalid`|Expected result: `false` but validator returned: `"Cannot create property '__$validated' on boolean 'false'"`. **This excludes this validator from performance tests**
+`items with boolean schemas, array with two items is invalid`|Expected result: `false` but validator returned: `"Cannot create property '__$validated' on boolean 'false'"`
 `items with boolean schemas, empty array is valid`|Expected result: `true` but validator returned: `"Cannot create property '__$validated' on boolean 'false'"`. **This excludes this validator from performance tests**
 `not with boolean schema false, any value is valid`|Expected result: `true` but validator returned: `false`
 `oneOf with boolean schemas, all true, any value is invalid`|Expected result: `false` but validator returned: `"Cannot create property '__$validated' on boolean 'true'"`. **This excludes this validator from performance tests**

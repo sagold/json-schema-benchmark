@@ -13,9 +13,9 @@ that is the case for these tests.
 |-----------|------
 `invalid definition, invalid definition schema`|Expected result: `false` but validator returned: `true`
 `evaluating the same schema location against the same data location twice is not a sign of an infinite loop, failing case`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`items and subitems, too many sub-items`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`items and subitems, wrong item`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`items and subitems, wrong sub-item`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`items and subitems, too many sub-items`|Expected result: `false` but validator returned: `true`
+`items and subitems, wrong item`|Expected result: `false` but validator returned: `true`
+`items and subitems, wrong sub-item`|Expected result: `false` but validator returned: `true`
 `maxLength validation, two supplementary Unicode code points is long enough`|Expected result: `true` but validator returned: `false`
 `maxProperties = 0 means the object is empty, one property is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `minLength validation, one supplementary Unicode code point is not long enough`|Expected result: `false` but validator returned: `true`
@@ -76,7 +76,7 @@ that is the case for these tests.
 `Proper UTF-16 surrogate pair handling: patternProperties, doesn't match two`|Expected result: `false` but validator returned: `true`
 `root pointer ref, recursive mismatch`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `relative pointer ref to object, mismatch`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`relative pointer ref to array, mismatch array`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`relative pointer ref to array, mismatch array`|Expected result: `false` but validator returned: `true`
 `escaped pointer ref, slash invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `escaped pointer ref, tilde invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `escaped pointer ref, percent invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
@@ -87,8 +87,8 @@ that is the case for these tests.
 `property named $ref, containing an actual $ref, property named $ref invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `Recursive references between schemas, invalid tree`|Expected result: `false` but validator returned: `true`
 `refs with quote, object with strings is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`Location-independent identifier, mismatch`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`Location-independent identifier with absolute URI, mismatch`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`Location-independent identifier, mismatch`|Expected result: `false` but validator returned: `true`
+`Location-independent identifier with absolute URI, mismatch`|Expected result: `false` but validator returned: `true`
 `Location-independent identifier with base URI change in subschema, mismatch`|Expected result: `false` but validator returned: `true`
 `remote ref, remote ref invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `fragment within remote ref, remote fragment invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**

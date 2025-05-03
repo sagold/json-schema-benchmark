@@ -104,7 +104,7 @@ that is the case for these tests.
 `an array of schemas for items, incomplete array of items`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `an array of schemas for items, empty array`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `items with boolean schema (false), any non-empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`items with boolean schemas, array with two items is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`items with boolean schemas, array with two items is invalid`|Expected result: `false` but validator returned: `true`
 `items and subitems, fewer items is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `maxLength validation, two supplementary Unicode code points is long enough`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `maxProperties validation, ignores arrays`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**

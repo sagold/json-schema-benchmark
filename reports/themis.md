@@ -98,7 +98,7 @@ that is the case for these tests.
 `if appears at the end when serialized (keyword processing sequence), no redirects to then and fails`|Expected result: `false` but validator returned: `true`
 `if appears at the end when serialized (keyword processing sequence), invalid redirects to else and fails`|Expected result: `false` but validator returned: `true`
 `items with boolean schema (false), any non-empty array is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`items with boolean schemas, array with two items is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`items with boolean schemas, array with two items is invalid`|Expected result: `false` but validator returned: `true`
 `items and subitems, valid items`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `items and subitems, fewer items is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `not with boolean schema true, any value is invalid`|Expected result: `false` but validator returned: `"validators.0#/not is not a function"`. **This excludes this validator from performance tests**

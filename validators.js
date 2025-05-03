@@ -23,6 +23,7 @@ const djv = require("djv")();
 const jsvg = require("json-schema-validator-generator").default;
 const jlib = require("json-schema-library");
 const schemasafe = require("@exodus/schemasafe");
+const { compileSchema } = require("ajv/dist/compile");
 
 let cfworker;
 
@@ -283,21 +284,14 @@ module.exports = async function validators(draftUri, draftVersion) {
     {
       name: "json-schema-library",
       setup: function (schema) {
-        let draft;
-        if (draftVersion === "4") {
-          draft = new jlib.Draft04(schema);
-        } else if (draftVersion === "6") {
-          draft = new jlib.Draft06(schema);
-        } else {
-          draft = new jlib.Draft07(schema);
-        }
+        const node = jlib.compileSchema(schema);
         Object.keys(refs).forEach(function (uri) {
-          draft.addRemoteSchema(uri, refs[uri]);
+          node.addRemoteSchema(uri, refs[uri]);
         });
-        return draft;
+        return node;
       },
       test: function (instance, json, schema) {
-        return instance.isValid(json);
+        return instance.validate(json).valid;
       },
     },
     {

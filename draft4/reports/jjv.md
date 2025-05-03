@@ -83,7 +83,7 @@ that is the case for these tests.
 `base URI change, base URI change ref valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `base URI change - change folder, number is valid`|Expected result: `true` but validator returned: `false`
 `base URI change - change folder in subschema, number is valid`|Expected result: `true` but validator returned: `false`
-`root ref in remote ref, string is valid`|Expected result: `true` but validator returned: `false`
+`root ref in remote ref, string is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `root ref in remote ref, null is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `required validation, ignores strings`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `required validation, ignores other non-objects`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**

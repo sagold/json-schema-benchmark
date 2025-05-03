@@ -55,7 +55,7 @@ that is the case for these tests.
 `remote ref, remote ref invalid`|Expected result: `false` but validator returned: `"validators.http://localhost:1234/integer.json is not a function"`. **This excludes this validator from performance tests**
 `fragment within remote ref, remote fragment valid`|Expected result: `true` but validator returned: `"validators.http://localhost:1234/subSchemas.json#/integer is not a function"`. **This excludes this validator from performance tests**
 `fragment within remote ref, remote fragment invalid`|Expected result: `false` but validator returned: `"validators.http://localhost:1234/subSchemas.json#/integer is not a function"`. **This excludes this validator from performance tests**
-`ref within remote ref, ref within ref valid`|Expected result: `true` but validator returned: `"validators.http://localhost:1234/subSchemas.json#/refToInteger is not a function"`
+`ref within remote ref, ref within ref valid`|Expected result: `true` but validator returned: `"validators.http://localhost:1234/subSchemas.json#/refToInteger is not a function"`. **This excludes this validator from performance tests**
 `ref within remote ref, ref within ref invalid`|Expected result: `false` but validator returned: `"validators.http://localhost:1234/subSchemas.json#/refToInteger is not a function"`
 `base URI change, base URI change ref valid`|The schema failed to load(`invalid ref: folderInteger.json in baseUriChange/`). **This excludes this validator from performance tests**
 `base URI change, base URI change ref invalid`|The schema failed to load(`invalid ref: folderInteger.json in baseUriChange/`)
@@ -63,7 +63,7 @@ that is the case for these tests.
 `base URI change - change folder, string is invalid`|The schema failed to load(`invalid ref: folderInteger.json in baseUriChangeFolder/`)
 `base URI change - change folder in subschema, number is valid`|The schema failed to load(`invalid ref: folderInteger.json in baseUriChangeFolderInSubschema/`)
 `base URI change - change folder in subschema, string is invalid`|The schema failed to load(`invalid ref: folderInteger.json in baseUriChangeFolderInSubschema/`)
-`root ref in remote ref, string is valid`|The schema failed to load(`Cannot read properties of undefined (reading 'definitions')`)
+`root ref in remote ref, string is valid`|The schema failed to load(`Cannot read properties of undefined (reading 'definitions')`). **This excludes this validator from performance tests**
 `root ref in remote ref, null is valid`|The schema failed to load(`Cannot read properties of undefined (reading 'definitions')`). **This excludes this validator from performance tests**
 `root ref in remote ref, object is invalid`|The schema failed to load(`Cannot read properties of undefined (reading 'definitions')`)
 `required with escaped characters, object with all properties present is valid`|The schema failed to load(`Invalid or unexpected token`). **This excludes this validator from performance tests**

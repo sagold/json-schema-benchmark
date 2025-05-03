@@ -34,16 +34,16 @@ that is the case for these tests.
 `Recursive references between schemas, valid tree`|The schema failed to load(`NOT SUPPORTED: keyword "id", use "$id" for schema ID`)
 `Recursive references between schemas, invalid tree`|The schema failed to load(`NOT SUPPORTED: keyword "id", use "$id" for schema ID`)
 `Location-independent identifier, match`|The schema failed to load(`can't resolve reference #foo from id #`). **This excludes this validator from performance tests**
-`Location-independent identifier, mismatch`|The schema failed to load(`can't resolve reference #foo from id #`). **This excludes this validator from performance tests**
+`Location-independent identifier, mismatch`|The schema failed to load(`can't resolve reference #foo from id #`)
 `Location-independent identifier with absolute URI, match`|The schema failed to load(`can't resolve reference http://localhost:1234/bar#foo from id #`)
-`Location-independent identifier with absolute URI, mismatch`|The schema failed to load(`can't resolve reference http://localhost:1234/bar#foo from id #`). **This excludes this validator from performance tests**
+`Location-independent identifier with absolute URI, mismatch`|The schema failed to load(`can't resolve reference http://localhost:1234/bar#foo from id #`)
 `Location-independent identifier with base URI change in subschema, match`|The schema failed to load(`NOT SUPPORTED: keyword "id", use "$id" for schema ID`)
 `Location-independent identifier with base URI change in subschema, mismatch`|The schema failed to load(`NOT SUPPORTED: keyword "id", use "$id" for schema ID`)
 `remote ref, remote ref valid`|The schema failed to load(`can't resolve reference http://localhost:1234/integer.json from id #`). **This excludes this validator from performance tests**
 `remote ref, remote ref invalid`|The schema failed to load(`can't resolve reference http://localhost:1234/integer.json from id #`). **This excludes this validator from performance tests**
 `fragment within remote ref, remote fragment valid`|The schema failed to load(`can't resolve reference http://localhost:1234/subSchemas.json#/integer from id #`). **This excludes this validator from performance tests**
 `fragment within remote ref, remote fragment invalid`|The schema failed to load(`can't resolve reference http://localhost:1234/subSchemas.json#/integer from id #`). **This excludes this validator from performance tests**
-`ref within remote ref, ref within ref valid`|The schema failed to load(`can't resolve reference http://localhost:1234/subSchemas.json#/refToInteger from id #`)
+`ref within remote ref, ref within ref valid`|The schema failed to load(`can't resolve reference http://localhost:1234/subSchemas.json#/refToInteger from id #`). **This excludes this validator from performance tests**
 `ref within remote ref, ref within ref invalid`|The schema failed to load(`can't resolve reference http://localhost:1234/subSchemas.json#/refToInteger from id #`)
 `base URI change, base URI change ref valid`|The schema failed to load(`NOT SUPPORTED: keyword "id", use "$id" for schema ID`). **This excludes this validator from performance tests**
 `base URI change, base URI change ref invalid`|The schema failed to load(`NOT SUPPORTED: keyword "id", use "$id" for schema ID`)
@@ -51,7 +51,7 @@ that is the case for these tests.
 `base URI change - change folder, string is invalid`|The schema failed to load(`NOT SUPPORTED: keyword "id", use "$id" for schema ID`)
 `base URI change - change folder in subschema, number is valid`|The schema failed to load(`NOT SUPPORTED: keyword "id", use "$id" for schema ID`)
 `base URI change - change folder in subschema, string is invalid`|The schema failed to load(`NOT SUPPORTED: keyword "id", use "$id" for schema ID`)
-`root ref in remote ref, string is valid`|The schema failed to load(`NOT SUPPORTED: keyword "id", use "$id" for schema ID`)
+`root ref in remote ref, string is valid`|The schema failed to load(`NOT SUPPORTED: keyword "id", use "$id" for schema ID`). **This excludes this validator from performance tests**
 `root ref in remote ref, null is valid`|The schema failed to load(`NOT SUPPORTED: keyword "id", use "$id" for schema ID`). **This excludes this validator from performance tests**
 `root ref in remote ref, object is invalid`|The schema failed to load(`NOT SUPPORTED: keyword "id", use "$id" for schema ID`)
 

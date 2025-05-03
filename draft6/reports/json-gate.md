@@ -154,11 +154,11 @@ that is the case for these tests.
 `items with boolean schema (false), any non-empty array is invalid`|The schema failed to load(`Schema: 'items' attribute is a boolean when it should be either an object (schema) or an array`). **This excludes this validator from performance tests**
 `items with boolean schema (false), empty array is valid`|The schema failed to load(`Schema: 'items' attribute is a boolean when it should be either an object (schema) or an array`). **This excludes this validator from performance tests**
 `items with boolean schemas, array with one item is valid`|The schema failed to load(`Schema: 'items' attribute element 0 is not a valid schema: Schema is a boolean when it should be an object`). **This excludes this validator from performance tests**
-`items with boolean schemas, array with two items is invalid`|The schema failed to load(`Schema: 'items' attribute element 0 is not a valid schema: Schema is a boolean when it should be an object`). **This excludes this validator from performance tests**
+`items with boolean schemas, array with two items is invalid`|The schema failed to load(`Schema: 'items' attribute element 0 is not a valid schema: Schema is a boolean when it should be an object`)
 `items with boolean schemas, empty array is valid`|The schema failed to load(`Schema: 'items' attribute element 0 is not a valid schema: Schema is a boolean when it should be an object`). **This excludes this validator from performance tests**
-`items and subitems, too many sub-items`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`items and subitems, wrong item`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`items and subitems, wrong sub-item`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`items and subitems, too many sub-items`|Expected result: `false` but validator returned: `true`
+`items and subitems, wrong item`|Expected result: `false` but validator returned: `true`
+`items and subitems, wrong sub-item`|Expected result: `false` but validator returned: `true`
 `maxLength validation, two supplementary Unicode code points is long enough`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `maxProperties validation, too long is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `maxProperties = 0 means the object is empty, one property is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
@@ -305,7 +305,7 @@ that is the case for these tests.
 `propertyNames with boolean schema false, object with any properties is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `root pointer ref, recursive mismatch`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `relative pointer ref to object, mismatch`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-`relative pointer ref to array, mismatch array`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`relative pointer ref to array, mismatch array`|Expected result: `false` but validator returned: `true`
 `escaped pointer ref, slash invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `escaped pointer ref, tilde invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `escaped pointer ref, percent invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**

@@ -109,9 +109,9 @@ that is the case for these tests.
 `items with boolean schema (false), any non-empty array is invalid`|The schema failed to load(`Invalid schema.`). **This excludes this validator from performance tests**
 `items with boolean schema (false), empty array is valid`|The schema failed to load(`Invalid schema.`). **This excludes this validator from performance tests**
 `items with boolean schemas, array with one item is valid`|The schema failed to load(`Invalid schema.`). **This excludes this validator from performance tests**
-`items with boolean schemas, array with two items is invalid`|The schema failed to load(`Invalid schema.`). **This excludes this validator from performance tests**
+`items with boolean schemas, array with two items is invalid`|The schema failed to load(`Invalid schema.`)
 `items with boolean schemas, empty array is valid`|The schema failed to load(`Invalid schema.`). **This excludes this validator from performance tests**
-`items and subitems, wrong sub-item`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+`items and subitems, wrong sub-item`|Expected result: `false` but validator returned: `true`
 `maxLength validation, two supplementary Unicode code points is long enough`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 `minLength validation, one supplementary Unicode code point is not long enough`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 `not with boolean schema true, any value is invalid`|The schema failed to load(`Invalid schema.`). **This excludes this validator from performance tests**
